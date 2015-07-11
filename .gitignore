@@ -1,0 +1,31 @@
+### Symfony2
+/app/cache/*
+/app/logs/*
+!app/cache/.gitkeep
+!app/logs/.gitkeep
+
+# Parameters
+/app/config/parameters.yml
+
+# Managed by Composer
+/app/bootstrap.php.cache
+/bin/*
+!bin/console
+!bin/symfony_requirements
+/vendor/
+
+# Assets and user uploads
+/web/bundles/
+/web/uploads/
+
+# Build data
+/build/
+
+### PhpStorm
+.idea/
+
+### OSX
+.DS_Store
+
+### Vagrant
+.vagrant/
