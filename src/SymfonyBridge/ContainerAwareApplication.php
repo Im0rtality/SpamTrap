@@ -1,6 +1,6 @@
 <?php
 
-namespace SpamTrap\SymfonyBridge;
+namespace SymfonyBridge;
 
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerAwareTrait;

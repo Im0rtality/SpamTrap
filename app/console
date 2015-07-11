@@ -9,6 +9,7 @@ require __DIR__ . '/../vendor/autoload.php';
 $container = new ContainerBuilder();
 $loader = new YamlFileLoader($container, new FileLocator(__DIR__ . '/../app/config'));
 $loader->load('config.yml');
+$loader->load('service.yml');
 $container->compile();
 
 $application = $container->get('application');

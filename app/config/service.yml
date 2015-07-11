@@ -1,9 +1,13 @@
 services:
     application_loader:
-        class: SpamTrap\SymfonyBridge\CommandLoader
+        class: SymfonyBridge\CommandLoader
 
     application:
-        class: SpamTrap\SymfonyBridge\ContainerAwareApplication
+        class: SymfonyBridge\ContainerAwareApplication
         arguments: ['SpamTrap', ~]
         configurator: ["@application_loader", loadCommands]
 
+    elasticsearch:
+        class: Elasticsearch\Client
+        arguments:
+            - %elastic_connection%

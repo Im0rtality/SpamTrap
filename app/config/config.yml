@@ -1,2 +1,24 @@
-imports:
-    - {resource: service.yml}
+parameters:
+    elastic_connection:
+        hosts:
+            - 127.0.0.1:9200
+
+    elastic.index.message:  default
+    elastic.type.message: message
+
+    elastic.mapping:
+        index: %elastic.index.message%
+        body:
+            settings:
+                number_of_shards: 1
+                number_of_replicas: 0
+            mappings:
+                %elastic.type.message%:
+                    _timestamp:
+                        enabled: true
+                    properties:
+                        body:
+                            type: string
+                            index: analyzed
+                        spamicity:
+                            type: float
