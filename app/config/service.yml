@@ -1,0 +1,9 @@
+services:
+    application_loader:
+        class: SpamTrap\SymfonyBridge\CommandLoader
+
+    application:
+        class: SpamTrap\SymfonyBridge\ContainerAwareApplication
+        arguments: ['SpamTrap', ~]
+        configurator: ["@application_loader", loadCommands]
+
