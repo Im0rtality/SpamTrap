@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+sudo apt-get update
+sudo apt-get upgrade -y
+sudo apt-get install ruby-dev -y
+
+if [ ! -x /usr/bin/git ]; then
+    sudo apt-get install git -y
+fi
+
+if [ ! -x /usr/bin/librarian-puppet ]; then
+    sudo gem install librarian-puppet --no-ri --no-rdoc
+else
+    sudo gem update librarian-puppet --no-ri --no-rdoc
+fi
+
+if [ -x /usr/bin/librarian-puppet ]; then
+  cd /vagrant/.provision/puppet && librarian-puppet install --verbose
+fi

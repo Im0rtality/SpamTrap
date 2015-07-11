@@ -1,0 +1,27 @@
+FORGE
+  remote: https://forgeapi.puppetlabs.com
+  specs:
+    elasticsearch-elasticsearch (0.2.4)
+      puppetlabs-stdlib (>= 3.2.0)
+    example42-php (2.0.17)
+      example42-puppi (>= 2.0.0)
+    example42-puppi (2.1.11)
+    maestrodev-wget (1.7.0)
+    puppetlabs-apt (1.8.0)
+      puppetlabs-stdlib (>= 2.2.1)
+    puppetlabs-git (0.4.0)
+      puppetlabs-stdlib (>= 3.2.0)
+    puppetlabs-ntp (4.0.0)
+      puppetlabs-stdlib (< 5.0.0, >= 4.6.0)
+    puppetlabs-stdlib (4.6.0)
+    willdurand-composer (1.1.1)
+      maestrodev-wget (>= 1.2.0)
+
+DEPENDENCIES
+  elasticsearch-elasticsearch (= 0.2.4)
+  example42-php (= 2.0.17)
+  puppetlabs-apt (= 1.8.0)
+  puppetlabs-git (>= 0)
+  puppetlabs-ntp (>= 0)
+  willdurand-composer (>= 0)
+

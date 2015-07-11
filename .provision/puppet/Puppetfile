@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+#^syntax detection
+
+forge "https://forgeapi.puppetlabs.com"
+
+mod 'puppetlabs/apt', '1.8.0'
+mod 'puppetlabs/ntp'
+mod 'puppetlabs/git'
+mod 'example42/php', '2.0.17'
+mod 'willdurand/composer'
+mod 'elasticsearch/elasticsearch', '0.2.4'
