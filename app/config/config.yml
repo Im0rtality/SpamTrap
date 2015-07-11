@@ -22,3 +22,5 @@ parameters:
                             index: analyzed
                         spamicity:
                             type: float
+
+    spamtrap.spamicity_threshold: 0.9
