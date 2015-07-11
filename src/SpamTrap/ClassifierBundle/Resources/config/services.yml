@@ -1,0 +1,8 @@
+services:
+    spamtrap_classifier.classifier:
+        class: SpamTrap\ClassifierBundle\Classifier\Classifier
+        arguments:
+            - @elasticsearch
+            - %spamtrap.spamicity_threshold%
+            - %elastic.index.message%
+            - %elastic.type.message%

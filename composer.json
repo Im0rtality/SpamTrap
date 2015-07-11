@@ -10,7 +10,8 @@
         "psr/log": "~1.0",
         "monolog/monolog": "~1.13.1",
         "symfony/filesystem": "^2.7",
-        "symfony/finder": "^2.7"
+        "symfony/finder": "^2.7",
+        "marc-mabe/php-enum": "^2.1"
     },
     "license": "Proprietary",
     "authors": [
