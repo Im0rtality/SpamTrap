@@ -37,9 +37,11 @@ class Classifier
         $antiPws = 1;
         foreach (explode(' ', $message) as $word) {
             $classification = $this->classifyWord($word);
-            $map[$word] = $classification;
-            $pws *= $classification->getSpamicity();
-            $antiPws *= (1 - $classification->getSpamicity());
+            if (!$classification->getClass()->is(MessageClass::UNKNOWN)) {
+                $map[$word] = $classification;
+                $pws *= $classification->getSpamicity();
+                $antiPws *= (1 - $classification->getSpamicity());
+            }
         }
 
         $result = new Classification();
